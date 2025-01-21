@@ -33,7 +33,7 @@ app.get('/books', (req, res)=>{
 
 // get book by id 
 app.get ('/books/:id', (req, res)=>{
-  const book = findBookById(req.\s.id);
+  const book = findBookById(req.params.id);
   if (!book){
     return res.status(404).json({error: `Book with ID ${req.params.id} not found.`});
   }
